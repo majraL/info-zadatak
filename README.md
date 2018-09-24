@@ -1,6 +1,6 @@
 # Static environment
 
-To set up a local, front-end environment you will need the [Node Version Manager](https://github.com/creationix/nvm) first.
+To set up a local, frontend environment you will need the [Node Version Manager](https://github.com/creationix/nvm) first.
 
 Once NVM is installed, navigate to the project root and run:
 
@@ -13,12 +13,11 @@ Source files are located in
 
 * ```src/html/app``` for HTML
 * ```src/scss/app``` for SCSS
-* ```src/media/*``` for PNGs and large SVGs
-* ```src/media/symbols``` for smaller SVGs (as arrows, chevrons)
+* ```src/media/*``` for PNGs, SVGs, ...
 * ```src/css``` for unminified CSS
 * ```src/js``` for unminified JS
 
 
 # Static view, without running the environment
 
-* open build/index.html
+* open ```build/index.html```
