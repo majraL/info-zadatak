@@ -1,0 +1,23 @@
+// Toggle CSS hack for show/hide effect
+.o-toggle {
+
+  &_trigger[type=checkbox] {
+    @extend %hiddenHack;
+  }
+
+  &_label {
+    @extend %user-select;
+
+    &:hover {
+      @extend %cursor-pointer;
+    }
+
+  }
+
+  &_body {
+    display: none;
+  }
+
+  &_trigger[type=checkbox]:checked ~ .o-toggle_body {}
+
+}

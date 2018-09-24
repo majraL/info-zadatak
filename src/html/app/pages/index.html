@@ -1,0 +1,41 @@
+<!--Load Main HTML Layout-->
+{% extends "src/html/app/template/base.html" %}
+
+<!--Define Site Name-->
+{% set siteName = 'Project name' %}
+<!-- (should stay the same on all pages) -->
+
+<!--Define Main Schema-->
+{% set schemaType = 'Article' %}
+
+<!--Define OGP type-->
+{% set opgType = 'article' %}
+
+<!--Define Twitter type and handles-->
+{% set twitterCardType = 'product' %}
+{% set twitterNameAuthor = '@author_handle' %}
+{% set twitterSite = '@site_handle' %}
+
+<!--Define Page Details-->
+{% set pageTitle = 'Homepage' %}
+{% set pageTitleName = 'Homepage' %}
+{% set pageDescription = 'Page description. No longer than 155 characters.' %}
+{% set pageUrl = 'http://www.example.com/' %}
+{% set pageImage = '../media/brand/ogp.png' %}
+
+
+<!--Define body class-->
+{% set bodyClass = 'p-homepage' %}
+
+<!--Main Content-->
+{% block content %}
+{% include "src/html/app/components/header.html" %}
+
+<main>
+
+  <h1>tu sam</h1>
+
+</main>
+
+{% include "src/html/app/components/footer.html" %}
+{% endblock %}

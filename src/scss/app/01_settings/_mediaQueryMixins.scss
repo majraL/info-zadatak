@@ -1,0 +1,27 @@
+@mixin mobileOnly {@media only screen and (min-width: $small-breakpoint) and (max-width: $smallPlus-breakpoint) {@content;}}
+@mixin mobile {@media only screen and (min-width: $small-breakpoint) {@content;}}
+
+@mixin mobilePlusDown {@media only screen and (max-width: ($smallPlus-breakpoint)-1px) {@content;}}
+@mixin mobilePlusOnly {@media only screen and (min-width: $smallPlus-breakpoint) and (max-width: $medium-breakpoint) {@content;}}
+@mixin mobilePlus {@media only screen and (min-width: $smallPlus-breakpoint) {@content;}}
+
+@mixin tabletDown {@media only screen and (max-width: ($medium-breakpoint)-1px) {@content;}}
+@mixin tabletOnly {@media only screen and (min-width: $medium-breakpoint) and (max-width: $mediumPlus-breakpoint) {@content;}}
+@mixin tablet {@media only screen and (min-width: $medium-breakpoint) {@content;}}
+
+@mixin tabletPlusDown {@media only screen and (max-width: ($mediumPlus-breakpoint)-1px) {@content;}}
+@mixin tabletPlusOnly {@media only screen and (min-width: $mediumPlus-breakpoint) and (max-width: $large-breakpoint) {@content;}}
+@mixin tabletPlus {@media only screen and (min-width: $mediumPlus-breakpoint) {@content;}}
+
+@mixin laptopDown {@media only screen and (max-width: ($large-breakpoint)-1px) {@content;}}
+@mixin laptopOnly {@media only screen and (min-width: $large-breakpoint) and (max-width: $largePlus-breakpoint) {@content;}}
+@mixin laptop {@media only screen and (min-width: $large-breakpoint) {@content;}}
+
+@mixin desktopDown {@media only screen and (max-width: ($largePlus-breakpoint)-1px) {@content;}}
+@mixin desktop {@media only screen and (min-width: $largePlus-breakpoint) {@content;}}
+
+// Custom media query
+@mixin customQuery($customQuery) {@media only screen and ($customQuery) {@content;}}
+
+// Print media query
+@mixin print { @media print { @content; } }

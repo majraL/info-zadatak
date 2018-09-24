@@ -1,0 +1,16 @@
+// Titles
+.c-ttl {
+  margin: 0;
+
+  // Sizes of title
+  &-def {
+    @include font-size(16);
+  }
+
+  &-main {
+    @include font-size(25);
+  }
+
+  // Specific targets
+
+}

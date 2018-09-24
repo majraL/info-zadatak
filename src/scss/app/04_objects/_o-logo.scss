@@ -1,0 +1,19 @@
+// Logo
+.o-logo {
+  display: none;
+
+  &_img {}
+
+  @include tabletPlus {
+
+    &_img {}
+
+  }
+
+  @include laptop {
+
+    &_img {}
+
+  }
+
+}

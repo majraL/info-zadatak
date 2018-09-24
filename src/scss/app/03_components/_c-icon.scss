@@ -1,0 +1,47 @@
+// Icons
+//
+// // icon color is changed by 'iconic' JS plugin
+
+.c-icon {
+
+  .iconic {
+    height: 0;
+    opacity: 0;
+
+    &.injected-svg {
+      height: auto;
+      opacity: 1;
+    }
+
+  }
+
+  * {
+    width: 1em;
+  }
+
+  &.c-icon-21 * {
+    width: 21px;
+    height: 21px;
+  }
+
+  &.c-icon-48-44 * {
+    width: 48px;
+    height: 44px;
+  }
+
+  // Specific targets
+}
+
+.iconic * {
+
+  .c-icon-white & {
+    fill: $white;
+    stroke: $white;
+  }
+
+  .c-icon-black & {
+    fill: $black;
+    stroke: $black;
+  }
+
+}

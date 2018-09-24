@@ -1,0 +1,21 @@
+{% macro inputFunction(fg_class, lb_class, lb_txt, fe_id, fe_class, fe_name, fe_type, fe_placeholder, fe_acmpl, fe_attr, hasError) %}
+{% if hasError %}
+<div class="{{ fg_class }} error has-error ">
+  {% else %}
+<div class="{{ fg_class }}">
+  {% endif %}
+
+  <label class="{{ lb_class }}" for="{{ fe_id }}">{{ lb_txt }}</label>
+  <input id="{{ fe_id }}"
+      class="{{ fe_class }}"
+      type="{{ fe_type }}"
+      name="{{ fe_name }}"
+      {% if fe_placeholder %}placeholder="{{ fe_placeholder }}"{% endif %}
+      {% if fe_acmpl %}autocomplete="{{ fe_acmpl }}"{% endif %} {{ fe_attr }}>
+  {% if hasError %}
+  <div class="form-error-wrapper">
+    <div class="form-error-message">Field "{{ lb_txt }}" is required</div>
+  </div>
+  {% endif %}
+
+</div>{% endmacro %}

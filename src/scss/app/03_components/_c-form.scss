@@ -1,0 +1,144 @@
+// Forms
+
+// Group
+$input-group-margin-bottom: .75rem;
+$border-color: #09384E;
+
+// Control
+$input-color: $brand-primary;
+$input-bg-color: $white;
+
+$input-padding-y: .44rem;
+$input-padding-x: .75rem;
+
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-border-color: rgba($border-color, .2);
+$input-border-color-hover: rgba($border-color, .7);
+
+$input-border-radius: 0;
+
+$input-font-size: 1rem;
+$input-font-weight: $font-weight-regular;
+
+$input-line-height: 1.4;
+
+
+// Label
+$input-label-color: $input-color;
+
+$input-label-margin-bottom: .25rem;
+
+$input-label-font-size: .9375rem;
+$input-label-font-weight: $font-weight-semiBold;
+
+$color-error: #D0021B;
+
+.form {
+
+  &-group {
+
+    @if $input-group-margin-bottom != 0 {
+      margin-bottom: $input-group-margin-bottom;
+
+      .form-group-clean > & {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .o-contact_form & {
+      margin-bottom: 1.1rem;
+    }
+
+  }
+
+  &-control {
+    display: block;
+    width: 100%;
+    padding: $input-padding-y $input-padding-x;
+    border-width: $input-border-width;
+    border-style: $input-border-style;
+    border-color: $input-border-color;
+    color: $input-color;
+    line-height: $input-line-height;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    font-family: $font-family-base;
+    // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+    background-color: $input-bg-color;
+    background-image: none;
+    background-clip: padding-box;
+
+    &:not(.hasDatepicker) {
+      @include transition();
+    }
+
+    @if $input-border-radius != 0 {
+      border-radius: $input-border-radius;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $input-border-color-hover;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    .error.has-error & {
+      border-color: $red;
+    }
+
+    &[readonly] {}
+
+    &.hasDatepicker {
+      @extend %cursor-pointer;
+      @extend %no-repeat;
+      @extend %cursor-pointer;
+      background-size: 16px 16px;
+      background-position: calc(100% - 8px) 50%;
+      //background-image: url("../media/app/datepicker.svg") !important;
+    }
+
+    // In case of Wordpress
+    &.wpcf7-not-valid {
+      border-color: $color-error;
+      color: $color-error;
+    
+      ~ .wpcf7-not-valid-tip {
+        color: $color-error;
+        text-align: right;
+      }
+
+    }
+
+  }
+
+  &-label {
+    display: block;
+    margin-bottom: $input-label-margin-bottom;
+    color: $input-label-color;
+    font-size: $input-label-font-size;
+    font-weight: $input-label-font-weight;
+  }
+
+}
+
+.form-error {
+
+  &-wrapper {}
+
+  &-message {
+    color: $red;
+  }
+
+}
+
+// Specific targets
+.form {
+
+  //.o-sidebar_header &-control {}
+
+}

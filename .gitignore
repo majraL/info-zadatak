@@ -1,0 +1,65 @@
+# Created partially with https://www.gitignore.io/api/sass,intellij,macos,node
+
+
+### Ignore Gulp.js temp folder  ###
+.gulp
+
+
+### Sass ###
+.sass-cache/
+*.css.map
+
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+
+#---------------
+# Design stuff
+#---------------
+*.scssc
+**/css/maps/*
+!**/scripts/**/vendor/
+!**/satin/**/vendor/
+!**/scss/**/vendor/
+!**/css/**/vendor/

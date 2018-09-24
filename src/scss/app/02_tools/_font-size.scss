@@ -1,0 +1,3 @@
+@mixin font-size($fsize: 16) {
+  font-size: ($fsize / 16) * 1rem;
+}

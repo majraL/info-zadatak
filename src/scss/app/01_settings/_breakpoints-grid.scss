@@ -1,0 +1,30 @@
+/*------------------------------------------------------------------------------------
+  BREAKPOINTS
+------------------------------------------------------------------------------------*/
+$small-breakpoint:              0px;
+$smallPlus-breakpoint:          468px;
+$medium-breakpoint:             600px;
+$mediumPlus-breakpoint:         800px;
+$large-breakpoint:              1025px;
+$largePlus-breakpoint:          1400px;
+
+
+/*------------------------------------------------------------------------------------
+  CONTAINER
+------------------------------------------------------------------------------------*/
+$large-maxWidth:                1440px;
+
+
+/*------------------------------------------------------------------------------------
+  GRID, GUTTER
+------------------------------------------------------------------------------------*/
+// NEED TO FIX THIS, only one gutter nowadays
+$grid-columns:                  12;
+$grid-gutter-width-mobile:      10px;
+$grid-gutter-width-tablet:      20px;
+$grid-gutter-width-laptop:      20px;
+$grid-gutter-width-desktop:     30px;
+
+
+
+

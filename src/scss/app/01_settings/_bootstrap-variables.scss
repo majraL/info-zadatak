@@ -1,0 +1,50 @@
+// Grid breakpoints
+$grid-breakpoints: (
+  xs:  $small-breakpoint,
+  sm:  $smallPlus-breakpoint,
+  md:  $medium-breakpoint,
+  mdp: $mediumPlus-breakpoint,
+  lg:  $large-breakpoint,
+  xl:  $largePlus-breakpoint
+);
+
+
+// Grid containers
+$container-max-widths: (
+  lg: $large-maxWidth + $grid-gutter-width-desktop
+);
+
+
+// Grid columns
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-mobile,
+  md: $grid-gutter-width-tablet,
+  lg: $grid-gutter-width-laptop,
+  xl: $grid-gutter-width-desktop
+);
+
+// Grid columns for outer container
+$grid-gutter-widths-outer: (
+  xs: ($grid-gutter-width-mobile + $grid-gutter-width-mobile),
+  md: ($grid-gutter-width-tablet + $grid-gutter-width-tablet),
+  lg: ($grid-gutter-width-laptop + $grid-gutter-width-laptop),
+  xl: ($grid-gutter-width-desktop + $grid-gutter-width-desktop)
+);
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// stylelint-disable
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+), $spacers);

@@ -1,0 +1,4 @@
+// Transition - minimal
+@mixin transition($what: all, $time: .2s, $how: ease-in-out){
+  transition: $what $time $how;
+}

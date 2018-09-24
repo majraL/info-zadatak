@@ -1,0 +1,374 @@
+%svg-common {
+	background: url("../media/sprite/sprite.svg") no-repeat;
+}
+
+.svg-arrow {
+	@extend %svg-common;
+	background-position: 98.92183288409703% 72.41379310344827%;
+}
+
+.svg-arrow-dims {
+	width: 14px;
+	height: 13px;
+}
+
+.svg-arrow-icon {
+	@extend %svg-common;
+	background-position: 68.82352941176471% 87.93650793650794%;
+}
+
+.svg-arrow-icon-dims {
+	width: 45px;
+	height: 46px;
+}
+
+.svg-award-best-sms {
+	@extend %svg-common;
+	background-position: 0 67.93893129770993%;
+}
+
+.svg-award-best-sms-dims {
+	width: 82px;
+	height: 99px;
+}
+
+.svg-chatapps-icon {
+	@extend %svg-common;
+	background-position: 40% 89.06752411575563%;
+}
+
+.svg-chatapps-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-chevron {
+	@extend %svg-common;
+	background-position: 81.48148148148148% 75.91036414565826%;
+}
+
+.svg-chevron-dims {
+	width: 7px;
+	height: 4px;
+}
+
+.svg-chevron-primary {
+	@extend %svg-common;
+	background-position: 79.62962962962963% 75.91036414565826%;
+}
+
+.svg-chevron-primary-dims {
+	width: 7px;
+	height: 4px;
+}
+
+.svg-chevron-right {
+	@extend %svg-common;
+	background-position: 77.83641160949868% 17.714285714285715%;
+}
+
+.svg-chevron-right-dims {
+	width: 6px;
+	height: 11px;
+}
+
+.svg-chevron-right-blue {
+	@extend %svg-common;
+	background-position: 77.83641160949868% 14.571428571428571%;
+}
+
+.svg-chevron-right-blue-dims {
+	width: 6px;
+	height: 11px;
+}
+
+.svg-chevron-white {
+	@extend %svg-common;
+	background-position: 83.33333333333333% 75.91036414565826%;
+}
+
+.svg-chevron-white-dims {
+	width: 7px;
+	height: 4px;
+}
+
+.svg-chevronEmpty {
+	@extend %svg-common;
+	background-position: 95.2% 72.83236994219654%;
+}
+
+.svg-chevronEmpty-dims {
+	width: 10px;
+	height: 15px;
+}
+
+.svg-chevronEmpty-white {
+	@extend %svg-common;
+	background-position: 92.51336898395722% 73.04347826086956%;
+}
+
+.svg-chevronEmpty-white-dims {
+	width: 11px;
+	height: 16px;
+}
+
+.svg-doc {
+	@extend %svg-common;
+	background-position: 89.4308943089431% 73.6842105263158%;
+}
+
+.svg-doc-dims {
+	width: 16px;
+	height: 19px;
+}
+
+.svg-email-icon {
+	@extend %svg-common;
+	background-position: 44.47761194029851% 38.263665594855304%;
+}
+
+.svg-email-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-emerging-icon {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-emerging-icon-dims {
+	width: 84px;
+	height: 84px;
+}
+
+.svg-gsma-logo-bw {
+	@extend %svg-common;
+	background-position: 25.54517133956386% 67.68060836501901%;
+}
+
+.svg-gsma-logo-bw-dims {
+	width: 64px;
+	height: 98px;
+}
+
+.svg-handheart-icon {
+	@extend %svg-common;
+	background-position: 30.791788856304986% 38.51132686084142%;
+}
+
+.svg-handheart-icon-dims {
+	width: 44px;
+	height: 52px;
+}
+
+.svg-img {
+	@extend %svg-common;
+	background-position: 66.93766937669376% 67.05882352941177%;
+}
+
+.svg-img-dims {
+	width: 16px;
+	height: 21px;
+}
+
+.svg-integrate-icon {
+	@extend %svg-common;
+	background-position: 100% 30.32490974729242%;
+}
+
+.svg-integrate-icon-dims {
+	width: 84px;
+	height: 84px;
+}
+
+.svg-iso-logo {
+	@extend %svg-common;
+	background-position: 63.114754098360656% 17.28813559322034%;
+}
+
+.svg-iso-logo-dims {
+	width: 141px;
+	height: 66px;
+}
+
+.svg-location-pin-icon {
+	@extend %svg-common;
+	background-position: 66.189111747851% 57.234726688102896%;
+}
+
+.svg-location-pin-icon-dims {
+	width: 36px;
+	height: 50px;
+}
+
+.svg-mail-white {
+	@extend %svg-common;
+	background-position: 84.5505617977528% 73.6842105263158%;
+}
+
+.svg-mail-white-dims {
+	width: 29px;
+	height: 19px;
+}
+
+.svg-mef-logo {
+	@extend %svg-common;
+	background-position: 0 21.68284789644013%;
+}
+
+.svg-mef-logo-dims {
+	width: 151px;
+	height: 52px;
+}
+
+.svg-mma-logo {
+	@extend %svg-common;
+	background-position: 64.70588235294117% 0;
+}
+
+.svg-mma-logo-dims {
+	width: 147px;
+	height: 51px;
+}
+
+.svg-omni-icon {
+	@extend %svg-common;
+	background-position: 48.666666666666664% 64.25992779783394%;
+}
+
+.svg-omni-icon-dims {
+	width: 85px;
+	height: 84px;
+}
+
+.svg-pci-logo {
+	@extend %svg-common;
+	background-position: 0 39.40397350993378%;
+}
+
+.svg-pci-logo-dims {
+	width: 105px;
+	height: 59px;
+}
+
+.svg-phone-white {
+	@extend %svg-common;
+	background-position: 70.88948787061994% 66.86217008797654%;
+}
+
+.svg-phone-white-dims {
+	width: 14px;
+	height: 20px;
+}
+
+.svg-pin {
+	@extend %svg-common;
+	background-position: 73.75690607734806% 59.467455621301774%;
+}
+
+.svg-pin-dims {
+	width: 23px;
+	height: 23px;
+}
+
+.svg-push-icon {
+	@extend %svg-common;
+	background-position: 59.40298507462686% 38.263665594855304%;
+}
+
+.svg-push-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-rcs-icon {
+	@extend %svg-common;
+	background-position: 74.32835820895522% 38.263665594855304%;
+}
+
+.svg-rcs-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-reporting-icon {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-reporting-icon-dims {
+	width: 84px;
+	height: 84px;
+}
+
+.svg-sms-icon {
+	@extend %svg-common;
+	background-position: 25.074626865671643% 89.06752411575563%;
+}
+
+.svg-sms-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-strava-logo {
+	@extend %svg-common;
+	background-position: 0 10.091743119266056%;
+}
+
+.svg-strava-logo-dims {
+	width: 154px;
+	height: 34px;
+}
+
+.svg-tel {
+	@extend %svg-common;
+	background-position: 73.75690607734806% 52.662721893491124%;
+}
+
+.svg-tel-dims {
+	width: 23px;
+	height: 23px;
+}
+
+.svg-uber-logo {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-uber-logo-dims {
+	width: 154px;
+	height: 33px;
+}
+
+.svg-voice-icon {
+	@extend %svg-common;
+	background-position: 54.92537313432836% 89.06752411575563%;
+}
+
+.svg-voice-icon-dims {
+	width: 50px;
+	height: 50px;
+}
+
+.svg-workflows-icon {
+	@extend %svg-common;
+	background-position: 100% 60.64981949458484%;
+}
+
+.svg-workflows-icon-dims {
+	width: 84px;
+	height: 84px;
+}
+
+.svg-zip {
+	@extend %svg-common;
+	background-position: 62.60162601626016% 67.2566371681416%;
+}
+
+.svg-zip-dims {
+	width: 16px;
+	height: 22px;
+}
+

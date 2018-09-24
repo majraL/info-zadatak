@@ -1,0 +1,7 @@
+@mixin ie() {
+
+  html.ie & {
+    @content;
+  }
+
+}

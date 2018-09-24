@@ -1,0 +1,10 @@
+{% macro selectFunction(fg_class, lb_class, lb_txt, fe_id, fe_class, fe_name, fe_attr, firstDisabled, opt_1, opt_2, opt_3, opt_4) %}
+<div class="{{ fg_class }}">
+  <label class="{{ lb_class }}" for="{{ fe_id }}">{{ lb_txt }}</label>
+  <select id="{{ fe_id }}" class="{{ fe_class }}" name="{{ fe_name }}" {{ fe_attr }}>
+    {% if firstDisabled %}<option value="" disabled selected>{{ lb_txt }}</option>{% endif %}
+    <option value="{{ opt_1 }}">{{ opt_1 }}</option>
+    <option value="{{ opt_2 }}">{{ opt_2 }}</option>
+    <option value="{{ opt_3 }}">{{ opt_3 }}</option>
+  </select>
+</div>{% endmacro %}

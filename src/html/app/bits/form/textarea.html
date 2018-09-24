@@ -1,0 +1,7 @@
+{% macro textareaFunction(fg_class, lb_class, lb_txt, fe_id, fe_class, fe_name, fe_placeholder, fe_rows, fe_attr) %}
+<div class="{{ fg_class }}">
+  <label class="{{ lb_class }}" for="{{ fe_id }}">{{ lb_txt }}</label>
+  <textarea id="{{ fe_id }}" class="{{ fe_class }}" name="{{ fe_name }}"
+      {% if fe_placeholder %}placeholder="{{ fe_placeholder }}"{% endif %}
+      {% if fe_rows %}rows="{{ fe_rows }}"{% endif %} {{ fe_attr }}></textarea>
+</div>{% endmacro %}
