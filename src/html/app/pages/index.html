@@ -2,7 +2,7 @@
 {% extends "src/html/app/template/base.html" %}
 
 <!--Define Site Name-->
-{% set siteName = 'Project name' %}
+{% set siteName = 'Infobip Landing Page' %}
 <!-- (should stay the same on all pages) -->
 
 <!--Define Main Schema-->
@@ -17,8 +17,8 @@
 {% set twitterSite = '@site_handle' %}
 
 <!--Define Page Details-->
-{% set pageTitle = 'Homepage' %}
-{% set pageTitleName = 'Homepage' %}
+{% set pageTitle = 'Infobip Landing' %}
+{% set pageTitleName = 'Infobip Landing' %}
 {% set pageDescription = 'Page description. No longer than 155 characters.' %}
 {% set pageUrl = 'http://www.example.com/' %}
 {% set pageImage = '../media/brand/ogp.png' %}
@@ -31,10 +31,182 @@
 {% block content %}
 {% include "src/html/app/components/header.html" %}
 
+{% import "src/html/app/bits/form/input.html" as input %}
+
 <main>
 
-  <h1>tu sam</h1>
+  <div class="container">
 
+    <header>
+      <div class="row">
+
+        <!-- Logo -->
+        <div class="col-12">
+          <a class="c-link" href="index.html">
+            <img src="https://www.infobip.com/assets/img/infobip-logo-white-new.svg" alt="Infobip logo">
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <section>
+      <div class="row">
+        
+        <!-- Message, Companies -->
+        <div class="col-lg-8">
+          <h1 class="c-ttl c-ttl-h1">Grow your business faster, by engaging your customers on their favourite channels.</h1>
+          <div class="o-hero_brands">
+            <strong>Trusted by the world's leading brands:</strong>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-4">
+          <div class="o-form_header">
+            <strong>READY TO GET STARTED?</strong>
+          </div>
+          <div class="o-form_body">
+            <form action="nono">
+                <!-- First name -->
+                  {{
+                    input.inputFunction(
+                      fg_class = "form-group",
+                      lb_class = "form-label",
+                      lb_txt = "First name:",
+                      fe_id = "firstName",
+                      fe_class = "form-control",
+                      fe_name = "firstName",
+                      fe_type = "text"
+                    )
+                  }}
+    
+                <!-- Last name -->
+                  {{
+                    input.inputFunction(
+                      fg_class = "form-group",
+                      lb_class = "form-label",
+                      lb_txt = "Last name:",
+                      fe_id = "lastName",
+                      fe_class = "form-control",
+                      fe_name = "lastName",
+                      fe_type = "text"
+                    )
+                  }}
+    
+                <!-- Company or website -->
+                  {{
+                    input.inputFunction(
+                      fg_class = "form-group",
+                      lb_class = "form-label",
+                      lb_txt = "Company or website:",
+                      fe_id = "company",
+                      fe_class = "form-control",
+                      fe_name = "company",
+                      fe_type = "text"
+                    )
+                  }}
+    
+                <!-- Country -->
+                  {% include "src/html/app/components/bits/form/select.html" %}
+    
+                <!-- Mobile phone -->
+                  {{
+                    input.inputFunction(
+                      fg_class = "form-group",
+                      lb_class = "form-label",
+                      lb_txt = "Mobile phone:",
+                      fe_id = "mobile",
+                      fe_class = "form-control",
+                      fe_name = "mobile",
+                      fe_type = "text"
+                    )
+                  }}
+    
+                <!-- Email -->
+                {{
+                  input.inputFunction(
+                    fg_class = "form-group",
+                    lb_class = "form-label",
+                    lb_txt = "Email:",
+                    fe_id = "email",
+                    fe_class = "form-control",
+                    fe_name = "email",
+                    fe_type = "email"
+                  )
+                }}
+    
+                <button class="c-btn c-btn-primary">Submit</button>
+                
+            </form>
+          </div>
+          <div class="o-form_footer">
+            <span>Already have an infobip account? - <a href="#login">login</a></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+
+        <div class="col-12">
+          {% include "src/html/app/components/witness.html" %}
+        </div>
+
+        <hr>
+
+        <div class="col-12">
+          <h2 class="c-ttl c-ttl-h2">Infobip helps you to better engage and meet your customers where they are across a variety of messaging channels.</h2>
+          <div class="o-product">
+            <div class="o-product_item">
+              <div class="o-product_img sms"></div>SMS
+            </div>
+            <div class="o-product_item">
+              <div class="o-product_img voice"></div>VOICE
+            </div>
+            <div class="o-product_item">
+              <div class="o-product_img push"></div>PUSH
+            </div>
+            <div class="o-product_item">
+              <div class="o-product_img email"></div>EMAIL
+            </div>
+            <div class="o-product_item">
+              <div class="o-product_img chat"></div>CHAT APPS
+            </div>
+            <div class="o-product_item">
+              <div class="o-product_img rcs"></div>RCS
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+
+        <div class="o-tab">
+
+          <div class="o-tabTriggers">
+            <div class="o-tabTriggers-item">OMNI Messaging</div>
+            <div class="o-tabTriggers-item">Channel Performance</div>
+            <div class="o-tabTriggers-item">Emerging Channels</div>
+            <div class="o-tabTriggers-item">Build Flows</div>
+            <div class="o-tabTriggers-item">Connect with pre-build integrations</div>
+          </div>
+
+          <div class="o-tabContent">
+            <div class="o-tabContent-item">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 </main>
 
 {% include "src/html/app/components/footer.html" %}
