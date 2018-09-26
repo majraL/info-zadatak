@@ -1,2 +1,24 @@
 // Main footer
-.o-mainFooter {}
+.o-mainFooter {
+  @extend %no-repeat;
+  position: fixed;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 81px 0;
+  background-color: #2D2D2D;
+  background-image: url('../media/app/map_NA.svg');
+  background-position: 59% 34%;
+  background-size: 35%;
+  color: $white;
+
+  &_terms {
+    @include font-size(14);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #636363;
+  }
+
+}

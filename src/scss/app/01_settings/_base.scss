@@ -12,17 +12,19 @@ html {
 }
 
 html, body {
-  height: 100%;
   font-family: $font-family-base;
-  font-weight: $font-weight-regular;
   font-size: $body-font-size;
   line-height: $line-height-default;
   letter-spacing: $letter-spacing-default;
-  color: $black;
+  color: $color-text-neutral;
+}
+
+body.p-homepage {
+  margin-bottom: 442px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-heading;
+  // font-family: $font-family-heading;
 }
 
 ul {
@@ -39,4 +41,42 @@ ul {
 
 a.c-btn {
   text-decoration: none;
+}
+
+hr {
+  border-color: #E3E3E3;
+  opacity: .3;
+
+  .o-mainFooter & {
+    border-color: #606060;
+    opacity: 1;
+  }
+
+  .o-stats & {
+    border-color: rgba($color-text-neutral, .25);
+    margin: 17px 0 15px;
+  }
+
+}
+
+main {
+
+  .p-homepage & {
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+  }
+
+}
+
+br.br {
+
+  @include laptopDown {
+    
+    .o-product_wrapper .c-ttl-h2 & {
+      display: none;
+    }
+
+  }
+
 }

@@ -50,6 +50,7 @@ gulp.task('sass', function () {
 gulp.task('css', ['sass'], function () {
   return gulp.src([
     path.npm + 'normalize.css/normalize.css',
+    path.npm + 'swiper/dist/css/swiper.css',
     'src/css/app/app.css'
   ])
   .pipe(concat('main.css'))
@@ -78,12 +79,8 @@ gulp.task('html', function () {
 gulp.task('js', function () {
   return gulp.src([
     path.npm + 'jquery/dist/jquery.js',
-
-    // Email suggestions plugin
-    // path.npm + 'mailcheck/src/mailcheck.min.js',
-
-    // Telephone country check
-    // path.npm + 'intl-tel-input/build/js/intlTelInput.js',
+    path.npm + 'smooth-scroll/dist/smooth-scroll.js',
+    path.npm + 'swiper/dist/js/swiper.js',
     'src/scripts/**/*.js'
   ])
   

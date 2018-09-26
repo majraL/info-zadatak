@@ -1,0 +1,12 @@
+.o-witness {
+  text-align: center;
+
+  &_mess {
+    @include font-size(22);
+    display: block;
+    padding: 25px 90px;
+    opacity: .85;
+    line-height: 34px;
+  }
+
+}

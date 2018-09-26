@@ -1,0 +1,33 @@
+.o-hero {
+  @extend %no-repeat;
+  @extend %bg-cover;
+  @extend %bg-center;
+  padding: 81px 0;
+  background-image: url('../media/app/marquee-background.jpg');
+
+  &_left {
+    padding-right: 40px;
+  }
+
+  &_brands {
+    margin-top: 60px;
+    color: $brand-primary;
+
+    &-bg {
+      @extend %no-repeat;
+      @extend %bg-contain;
+      height: 220px;
+      background-image: url('../media/app/logo-pond.svg');
+      background-position: 0 0;
+    }
+
+    .mess {
+      @include font-size(20);
+      display: block;
+      margin-bottom: 25px;
+      font-family: $font-weight-semiBold;
+    }
+
+  }
+
+}

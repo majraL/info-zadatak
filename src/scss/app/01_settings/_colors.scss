@@ -5,7 +5,7 @@ $black: #000000;
 $yellow: #F6A600;
 
 // Brand Primary
-$brand-primary: #2B464F;
+$brand-primary: #FF5202;
 
 $brand-primary-dark: scale-color(adjust-hue($brand-primary, -5), $saturation:2%, $lightness:-25%);
 $brand-primary-darken: scale-color(adjust-hue($brand-primary, -10), $saturation:6%, $lightness:-55%);
@@ -39,8 +39,8 @@ $brand-danger: #C12D3F;
 
 
 // Text colors
-$color-text-neutral: #3A3A3A;
-$color-text-neutral-light: lighten($color-text-neutral, 28%);
+$color-text-neutral: #1C1C1C;
+$color-text-neutral-light: #2D2D2D;
 $color-headings-neutral: darken($color-text-neutral, 16.86%);
 
 

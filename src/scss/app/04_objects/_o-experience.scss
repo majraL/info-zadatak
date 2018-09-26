@@ -1,0 +1,28 @@
+.o-experience {
+  padding: 28px 30px;
+  border-radius: 3px;
+  background-color: $brand-primary;
+
+  &_about {
+    line-height: 28px;
+  }
+
+  &-section {
+    @extend %no-repeat;
+    @extend %bg-cover;
+    @extend %bg-center;
+    padding: 81px 0;
+    background-image: url('../media/app/customer-experience-bg.jpg');
+    color: $white;
+
+    &_about {
+      @include font-size(24);
+      padding: 0 180px;
+      margin: 20px 0 60px;
+      text-align: center;
+      line-height: 34px;
+    }
+
+  }
+
+}

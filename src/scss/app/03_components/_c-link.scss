@@ -12,4 +12,36 @@
     @extend %decoration-underline;
   }
 
+  &-logo {
+    max-width: 170px;
+  }
+
+  .o-form_footer & {
+    @extend %decoration-underline;
+    color: $brand-primary;
+  }
+
+  .o-product &:hover {
+    @extend %decoration-none;
+  }
+
+  .o-office & {
+    @extend %decoration-underline;
+  }
+
+  .o-mainFooter_nav & {
+    color: #636363;
+    transition: color 125ms;
+
+    &:hover {
+      @extend %decoration-none;
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+  }
+
 }

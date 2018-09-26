@@ -1,0 +1,49 @@
+.o-logotypes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-wrapper {
+    @extend %no-repeat;
+    @extend %bg-cover;
+    @extend %bg-center;
+    padding: 51px 0;
+    background-color: #F3F3F3;
+    background-image: url('../media/app/globe-bg.png');
+  }
+
+  &_item {
+
+    &.sms {
+      @extend .svg-award-best-sms;
+      @extend .svg-award-best-sms-dims;
+    }
+
+    &.mef {
+      @extend .svg-mef-logo;
+      @extend .svg-mef-logo-dims;
+    }
+
+    &.ctia {
+      @extend .svg-gsma-logo-bw;
+      @extend .svg-gsma-logo-bw-dims;
+    }
+
+    &.mma {
+      @extend .svg-mma-logo;
+      @extend .svg-mma-logo-dims;
+    }
+
+    &.pci {
+      @extend .svg-pci-logo;
+      @extend .svg-pci-logo-dims;
+    }
+
+    &.bureau {
+      @extend .svg-iso-logo;
+      @extend .svg-iso-logo-dims;
+    }
+    
+  }
+
+}

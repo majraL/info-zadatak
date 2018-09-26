@@ -68,6 +68,10 @@ $font-sizes-list: 16, 20, 26;
   // line-height: 2rem;
 }
 
-.color-secondary {
+.color-prim {
+  color: $brand-primary;
+}
+
+.color-sec {
   color: $brand-secondary;
 }

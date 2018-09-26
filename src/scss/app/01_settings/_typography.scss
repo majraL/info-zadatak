@@ -15,18 +15,15 @@ $letter-spacing-lg: 0.02rem;
 
 
 // Font Family
-$font-family-base:            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-heading:         'Dosis', sans-serif;
+$font-family-base:            'ProximaNova-Regular', sans-serif;
+$font-family-heading:         'ProximaNova-Bold', sans-serif;
 $font-family-code:            courier new, Courier, monospace;
 
 
 
 // Font Weight
-$font-weight-black: 900;
-$font-weight-heavy: 800;
-$font-weight-heading: 700;
-$font-weight-semiBold: 600;
-$font-weight-medium: 500;
-$font-weight-regular: 400;
-$font-weight-light: 300;
-$font-weight-thin: 200;
+$font-weight-extraBold: 'ProximaNova-Extrabld', sans-serif;
+$font-weight-bold: 'ProximaNova-Bold', sans-serif;
+$font-weight-semiBold: 'ProximaNova-Semibold', sans-serif;
+$font-weight-regular: 'ProximaNova-Regular', sans-serif;
+$font-weight-light: 'ProximaNova-Light', sans-serif;

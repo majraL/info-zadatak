@@ -29,46 +29,47 @@
 
 <!--Main Content-->
 {% block content %}
-{% include "src/html/app/components/header.html" %}
 
 {% import "src/html/app/bits/form/input.html" as input %}
+{% import "src/html/app/components/tab.html" as tab %}
+
+<!-- TODO: 
+    - favicon
+    - pregledat klase, nazive i konvenciju jel sve štima
+-->
 
 <main>
-
-  <div class="container">
-
-    <header>
-      <div class="row">
-
-        <!-- Logo -->
-        <div class="col-12">
-          <a class="c-link" href="index.html">
-            <img src="https://www.infobip.com/assets/img/infobip-logo-white-new.svg" alt="Infobip logo">
-          </a>
-        </div>
-
-      </div>
-    </header>
-
-    <section>
+  
+  <section class="o-hero">
+    
+    <div class="container">
       <div class="row">
         
-        <!-- Message, Companies -->
+        <!-- Message, Brands -->
         <div class="col-lg-8">
-          <h1 class="c-ttl c-ttl-h1">Grow your business faster, by engaging your customers on their favourite channels.</h1>
-          <div class="o-hero_brands">
-            <strong>Trusted by the world's leading brands:</strong>
+          <div class="o-hero_left">
+            <a class="c-link c-link-logo" href="index.html">
+              <img class="c-img" src="https://www.infobip.com/assets/img/infobip-logo-white-new.svg" alt="Infobip logo">
+            </a>
+            <h1 class="c-ttl c-ttl-h1">Grow your business faster, by engaging your customers on their favourite channels.</h1>
+            <div class="o-hero_brands">
+              <strong class="mess">Trusted by the world's leading brands:</strong>
+              <div class="o-hero_brands-bg"></div>
+            </div>
           </div>
         </div>
 
         <!-- Form -->
         <div class="col-lg-4">
-          <div class="o-form_header">
-            <strong>READY TO GET STARTED?</strong>
-          </div>
-          <div class="o-form_body">
-            <form action="nono">
-                <!-- First name -->
+          <div class="o-hero_right">
+            <div class="o-form">
+              <div class="o-form_header">
+                <strong class="mess">READY TO GET STARTED?</strong>
+              </div>
+              <hr>
+              <div class="o-form_body">
+                <form action="nono">
+                  <!-- First name -->
                   {{
                     input.inputFunction(
                       fg_class = "form-group",
@@ -77,11 +78,12 @@
                       fe_id = "firstName",
                       fe_class = "form-control",
                       fe_name = "firstName",
-                      fe_type = "text"
+                      fe_type = "text",
+                      fe_attr = "required"
                     )
                   }}
-    
-                <!-- Last name -->
+        
+                  <!-- Last name -->
                   {{
                     input.inputFunction(
                       fg_class = "form-group",
@@ -90,11 +92,12 @@
                       fe_id = "lastName",
                       fe_class = "form-control",
                       fe_name = "lastName",
-                      fe_type = "text"
+                      fe_type = "text",
+                      fe_attr = "required"
                     )
                   }}
-    
-                <!-- Company or website -->
+        
+                  <!-- Company or website -->
                   {{
                     input.inputFunction(
                       fg_class = "form-group",
@@ -103,14 +106,15 @@
                       fe_id = "company",
                       fe_class = "form-control",
                       fe_name = "company",
-                      fe_type = "text"
+                      fe_type = "text",
+                      fe_attr = "required"
                     )
                   }}
-    
-                <!-- Country -->
-                  {% include "src/html/app/components/bits/form/select.html" %}
-    
-                <!-- Mobile phone -->
+        
+                  <!-- Country -->
+                  {% include "src/html/app/bits/form/select.html" %}
+        
+                  <!-- Mobile phone -->
                   {{
                     input.inputFunction(
                       fg_class = "form-group",
@@ -119,94 +123,294 @@
                       fe_id = "mobile",
                       fe_class = "form-control",
                       fe_name = "mobile",
-                      fe_type = "text"
+                      fe_type = "text",
+                      fe_attr = "required minlength=8"
                     )
                   }}
-    
-                <!-- Email -->
-                {{
-                  input.inputFunction(
-                    fg_class = "form-group",
-                    lb_class = "form-label",
-                    lb_txt = "Email:",
-                    fe_id = "email",
-                    fe_class = "form-control",
-                    fe_name = "email",
-                    fe_type = "email"
-                  )
-                }}
-    
-                <button class="c-btn c-btn-primary">Submit</button>
-                
-            </form>
-          </div>
-          <div class="o-form_footer">
-            <span>Already have an infobip account? - <a href="#login">login</a></span>
+        
+                  <!-- Email -->
+                  {{
+                    input.inputFunction(
+                      fg_class = "form-group",
+                      lb_class = "form-label",
+                      lb_txt = "Email:",
+                      fe_id = "email",
+                      fe_class = "form-control",
+                      fe_name = "email",
+                      fe_type = "email",
+                      fe_attr = "required"
+                    )
+                  }}
+        
+                  <button class="c-btn c-btn-primary">Submit</button>
+
+                </form>
+              </div>
+              <div class="o-form_footer">
+                <span>Already have an infobip account? - <a class="c-link" href="#login">login</a></span>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
 
-    <section>
+  </section>
+  
+
+  <section class="o-product_wrapper">
+    <div class="container">
       <div class="row">
 
         <div class="col-12">
-          {% include "src/html/app/components/witness.html" %}
+          <div class="swiper-container" data-swiper-container>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                {% include "src/html/app/components/witness.html" %}
+              </div>
+              <div class="swiper-slide">
+                {% include "src/html/app/components/witness.html" %}
+              </div>
+              <div class="swiper-slide">
+                {% include "src/html/app/components/witness.html" %}
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
 
-        <hr>
-
         <div class="col-12">
-          <h2 class="c-ttl c-ttl-h2">Infobip helps you to better engage and meet your customers where they are across a variety of messaging channels.</h2>
+          <h2 class="c-ttl c-ttl-h2">Infobip helps you to better engage and meet your <br class="br"/> customers where 
+              they are across a variety of messaging channels.</h2>
           <div class="o-product">
-            <div class="o-product_item">
-              <div class="o-product_img sms"></div>SMS
-            </div>
-            <div class="o-product_item">
-              <div class="o-product_img voice"></div>VOICE
-            </div>
-            <div class="o-product_item">
-              <div class="o-product_img push"></div>PUSH
-            </div>
-            <div class="o-product_item">
-              <div class="o-product_img email"></div>EMAIL
-            </div>
-            <div class="o-product_item">
-              <div class="o-product_img chat"></div>CHAT APPS
-            </div>
-            <div class="o-product_item">
-              <div class="o-product_img rcs"></div>RCS
-            </div>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img sms"></div>SMS
+              </div>
+            </a>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img voice"></div>VOICE
+              </div>
+            </a>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img push"></div>PUSH
+              </div>
+            </a>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img email"></div>EMAIL
+              </div>
+            </a>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img chat"></div>CHAT APPS
+              </div>
+            </a>
+            <a class="c-link" href="#">
+              <div class="o-product_item">
+                <div class="o-product_img rcs"></div>RCS
+              </div>
+            </a>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section class="o-tab-wrapper global-bg">
+    <div class="container">
+      <div class="o-tab">
+        
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="o-tab-triggers" data-tab-togglers="#tab-content">
+              <div class="o-tab-triggers_item active" data-toggle-tab="omni">OMNI Messaging</div>
+              <div class="o-tab-triggers_item" data-toggle-tab="performance">Channel Performance</div>
+              <div class="o-tab-triggers_item" data-toggle-tab="emerge">Emerging Channels</div>
+              <div class="o-tab-triggers_item" data-toggle-tab="flows">Build Flows</div>
+              <div class="o-tab-triggers_item" data-toggle-tab="pre-build">Connect with pre-build integrations</div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div id="tab-content" class="o-tab-content">
+              {{ 
+                tab.tabFunction(
+                  type = "omni",
+                  active = true,
+                  title = "OMNI Messaging",
+                  desc = "Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
+                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
+                    at the right time."
+                )
+              }}
+
+              {{ 
+                tab.tabFunction(
+                  type = "performance",
+                  active = false,
+                  title = "Channel Performance",
+                  desc = "Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
+                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
+                    at the right time."
+                )
+              }}
+
+              {{ 
+                tab.tabFunction(
+                  type = "emerge",
+                  active = false,
+                  title = "Emerging Channels",
+                  desc = "Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
+                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
+                    at the right time."
+                )
+              }}
+
+              {{ 
+                tab.tabFunction(
+                  type = "flows",
+                  active = false,
+                  title = "Build Flows",
+                  desc = "Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
+                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
+                    at the right time."
+                )
+              }}
+
+              {{ 
+                tab.tabFunction(
+                  type = "pre-build",
+                  active = false,
+                  title = "Connect with pre-build integrations",
+                  desc = "Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
+                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
+                    at the right time."
+                )
+              }}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="o-experience-section">
+    <div class="container">
       <div class="row">
 
-        <div class="o-tab">
+        <div class="col-12">
+          <h2 class="c-ttl c-ttl-h2">Infobip knows customer experience</h2>
+          <p class="o-experience-section_about">
+            It's what's inside that counts, that's why we've built the wolrd's most robust omni-channel customer 
+            communications platform from the ground up.</p>
+        </div>
 
-          <div class="o-tabTriggers">
-            <div class="o-tabTriggers-item">OMNI Messaging</div>
-            <div class="o-tabTriggers-item">Channel Performance</div>
-            <div class="o-tabTriggers-item">Emerging Channels</div>
-            <div class="o-tabTriggers-item">Build Flows</div>
-            <div class="o-tabTriggers-item">Connect with pre-build integrations</div>
+        <div class="col-md-6 col-lg-4">
+          <div class="o-experience presence">
+            <h4 class="c-ttl c-ttl-h4"><i class="c-icon"></i>GLOBAL PRESENCE, LOCAL EXECUTION</h4>
+            <p class="o-experience_about">Working on the ground in <strong>50+ offices worldwide</strong> means you can 
+              leverage our global messaging network to achieve top delivery in 190+ countries worldwide.</p>
           </div>
+        </div>
 
-          <div class="o-tabContent">
-            <div class="o-tabContent-item">
-            </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="o-experience platform">
+            <h4 class="c-ttl c-ttl-h4"><i class="c-icon"></i>IT'S A BETTER PLATFORM</h4>
+            <p class="o-experience_about">Scale according to your communication needs. With <strong>7 billion 
+              transactions per month</strong>, we have the messaging capacity to handle your every campaign.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="o-experience control">
+            <h4 class="c-ttl c-ttl-h4"><i class="c-icon"></i>END-TO-END CUSTOMER EXPERIENCE CONTROL</h4>
+            <p class="o-experience_about"><strong>Deep telco partnerships</strong> ensure a fully-controlled 
+              communications environment, offering you the flexibility to provide the best customer experience for your 
+              clients.</p>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
+  <div class="container">
+    <section class="o-stats-wrapper">
+      <div class="row">
+
+        <div class="col-12">
+          <h2 class="c-ttl c-ttl-rated">#1 RATED TIER1 A2P SMS VENDOR 2018</h2>
+          <p class="o-stats-wrapper_about">It’s what’s inside that counts, that’s why we’ve built the world’s top A2P 
+            SMS platform from the ground up.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="o-stats">
+            <div class="o-stats_no"><strong>200</strong> billion</div>
+            <hr>
+            <div class="o-stats_about">API calls annually</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="o-stats">
+            <div class="o-stats_no"><strong>7</strong> billion</div>
+            <hr>
+            <div class="o-stats_about">Monthly transactions</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="o-stats">
+            <div class="o-stats_no"><strong>4</strong> billion</div>
+            <hr>
+            <div class="o-stats_about">Mobile phone reach</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="o-stats">
+            <div class="o-stats_no"><strong>800</strong>+</div>
+            <hr>
+            <div class="o-stats_about">Mobile operators</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button class="c-btn c-btn-primary">Contact sales</button>
+        </div>
+
+      </div>
+    </section>
   </div>
+
+  <section class="o-logotypes-wrapper global-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <ul class="o-logotypes">
+            <li class="o-logotypes_item sms"></li>
+            <li class="o-logotypes_item mef"></li>
+            <li class="o-logotypes_item ctia"></li>
+            <li class="o-logotypes_item mma"></li>
+            <li class="o-logotypes_item pci"></li>
+            <li class="o-logotypes_item bureau"></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 {% include "src/html/app/components/footer.html" %}

@@ -1,0 +1,11 @@
+{% macro tabFunction(type, active, title, desc) %}
+{% if active %}
+<div class="o-tab-content_item {{ type }} active" data-tab="{{ type }}">
+{% else %}
+<div class="o-tab-content_item {{ type }}" data-tab="{{ type }}">
+{% endif %}
+  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> {{ title }}</h2>
+  <p class="o-tab-content_about">
+    {{ desc }}
+  </p>
+</div>{% endmacro %}

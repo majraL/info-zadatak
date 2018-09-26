@@ -1,20 +1,20 @@
 // Forms
 
 // Group
-$input-group-margin-bottom: .75rem;
+$input-group-margin-bottom: 1.375rem;
 $border-color: #09384E;
 
 // Control
-$input-color: $brand-primary;
+$input-color: #2D2D2D;
 $input-bg-color: $white;
 
-$input-padding-y: .44rem;
+$input-padding-y: .5rem;
 $input-padding-x: .75rem;
 
 $input-border-width: 1px;
 $input-border-style: solid;
-$input-border-color: rgba($border-color, .2);
-$input-border-color-hover: rgba($border-color, .7);
+$input-border-color: #CFD0D0;
+$input-border-color-hover: darken($input-border-color, 15%);
 
 $input-border-radius: 0;
 
@@ -63,20 +63,11 @@ $color-error: #D0021B;
     color: $input-color;
     line-height: $input-line-height;
     font-size: $input-font-size;
-    font-weight: $input-font-weight;
     font-family: $font-family-base;
     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
     background-color: $input-bg-color;
     background-image: none;
     background-clip: padding-box;
-
-    &:not(.hasDatepicker) {
-      @include transition();
-    }
-
-    @if $input-border-radius != 0 {
-      border-radius: $input-border-radius;
-    }
 
     &:hover,
     &:focus {
@@ -91,29 +82,6 @@ $color-error: #D0021B;
       border-color: $red;
     }
 
-    &[readonly] {}
-
-    &.hasDatepicker {
-      @extend %cursor-pointer;
-      @extend %no-repeat;
-      @extend %cursor-pointer;
-      background-size: 16px 16px;
-      background-position: calc(100% - 8px) 50%;
-      //background-image: url("../media/app/datepicker.svg") !important;
-    }
-
-    // In case of Wordpress
-    &.wpcf7-not-valid {
-      border-color: $color-error;
-      color: $color-error;
-    
-      ~ .wpcf7-not-valid-tip {
-        color: $color-error;
-        text-align: right;
-      }
-
-    }
-
   }
 
   &-label {
@@ -121,7 +89,7 @@ $color-error: #D0021B;
     margin-bottom: $input-label-margin-bottom;
     color: $input-label-color;
     font-size: $input-label-font-size;
-    font-weight: $input-label-font-weight;
+    font-family: $input-label-font-weight;
   }
 
 }
@@ -133,12 +101,5 @@ $color-error: #D0021B;
   &-message {
     color: $red;
   }
-
-}
-
-// Specific targets
-.form {
-
-  //.o-sidebar_header &-control {}
 
 }

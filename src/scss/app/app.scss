@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 
+
 /*------------------------------------------------------------------------------------
   01_settings
 ------------------------------------------------------------------------------------*/
 @import "01_settings/colors";
+@import "01_settings/fonts";
 @import "01_settings/typography";
 @import "01_settings/breakpoints-grid";
 @import "01_settings/bootstrap-variables"; // variables
@@ -14,11 +16,12 @@
 
 
 
-
 /*------------------------------------------------------------------------------------
   00_vendor
 ------------------------------------------------------------------------------------*/
 @import "00_vendor/bootstrap-includes";
+@import "00_vendor/swiper";
+
 
 
 
@@ -50,7 +53,7 @@
 @import "03_components/c-btn";
 //@import "03_components/c-customCheckbox";
 @import "03_components/c-form";
-// @import "03_components/c-icon";
+@import "03_components/c-icon";
 @import "03_components/c-img";
 @import "03_components/c-link";
 //@import "03_components/c-modal";
@@ -63,8 +66,17 @@
   04_objects
 ------------------------------------------------------------------------------------*/
 //@import "04_objects/o-logo";
+@import "04_objects/o-experience";
+@import "04_objects/o-form";
+@import "04_objects/o-logotypes";
 @import "04_objects/o-mainFooter";
 @import "04_objects/o-mainHeader";
+@import "04_objects/o-office";
+@import "04_objects/o-hero";
+@import "04_objects/o-product";
+@import "04_objects/o-tab";
+@import "04_objects/o-stats";
+@import "04_objects/o-witness";
 //@import "04_objects/o-toggle";
 
 

@@ -1,15 +1,6 @@
 .preformat {
   color: $color-text-neutral;
 
-  // Needed for new Goldfish redactor
-  // * {
-  //   @extend .clearfix;
-  // }
-
-  // table *:after {
-  //   content: normal;
-  // }
-
   &,
   a,
   p,

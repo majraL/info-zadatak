@@ -7,10 +7,77 @@
     @include font-size(16);
   }
 
-  &-main {
-    @include font-size(25);
+  &-h1 {
+    @include font-size(54);
+  }
+
+  &-h2 {
+    @include font-size(32);
+  }
+
+  &-h4 {
+    @include font-size(18);
+    font-family: $font-weight-extraBold;
+    line-height: 24px;
+  }
+
+  &-rated {
+    @include font-size(42);
+    font-family: $font-weight-extraBold;
   }
 
   // Specific targets
+  .o-hero &-h1 {
+    margin-top: 110px;
+    font-family: $font-weight-extraBold;
+    line-height: 60px;
+    color: $white;
+  }
+
+  .o-product_wrapper & {
+    padding: 45px 90px 0;
+    font-family: $font-weight-extraBold;
+    text-align: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 370px;
+      height: 2px;
+      background-color: #131313;
+      opacity: .1;
+      transform: translateX(-50%);
+    }
+
+  }
+
+  .o-tab-content_item &,
+  .o-experience & {
+    display: flex;
+    align-items: center;
+  }
+
+  .o-experience & {
+    min-height: 52px;
+  }
+
+  .o-experience.presence & {
+    padding-right: 20px;
+  }
+
+  .o-experience.platform & {
+    padding-right: 30px;
+  }
+  
+  .o-experience.control & {
+    padding-right: 15px;
+  }
+
+  .o-experience-section &-h2 {
+    font-family: $font-weight-extraBold;
+    text-align: center;
+  }
 
 }
