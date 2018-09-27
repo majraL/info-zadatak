@@ -88,6 +88,14 @@
 
   }
 
+  @include tabletPlusDown {
+
+    &-wrapper {
+      padding-bottom: 23.25rem;
+    }
+
+  }
+
   @include tabletDown {
 
     &-wrapper {

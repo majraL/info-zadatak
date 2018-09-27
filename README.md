@@ -1,6 +1,6 @@
 # Static environment
 
-To set up a local, frontend environment you will need [Node](https://nodejs.org/en/) and [Node Version Manager](https://github.com/creationix/nvm).
+To set up a local, frontend environment you will need [Node](https://nodejs.org/en/) and [Node Version Manager](https://github.com/creationix/nvm#node-version-manager---).
 
 Once NVM is installed, navigate to the project root and run:
 

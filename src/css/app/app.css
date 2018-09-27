@@ -3259,6 +3259,9 @@ button.c-btn:hover {
   @media only screen and (max-width: 1024px) {
     .o-tab-wrapper {
       padding-bottom: 21.25rem; } }
+  @media only screen and (max-width: 799px) {
+    .o-tab-wrapper {
+      padding-bottom: 23.25rem; } }
   @media only screen and (max-width: 599px) {
     .o-tab-wrapper {
       padding-bottom: 25rem; }
