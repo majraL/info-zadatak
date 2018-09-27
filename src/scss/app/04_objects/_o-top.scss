@@ -1,0 +1,27 @@
+.o-top {
+  @extend %bg-center;
+  @extend %no-repeat;
+  position: fixed;
+  z-index: 10;
+  right: 30px;
+  bottom: 100px;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  background-color: $brand-primary;
+  background-image: url('../media/app/chevron-up.svg');
+  background-size: 27px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 175ms;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+}

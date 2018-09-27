@@ -2,17 +2,17 @@
 .c-ttl {
   margin: 0;
 
-  // Sizes of title
-  &-def {
-    @include font-size(16);
-  }
-
   &-h1 {
     @include font-size(54);
   }
 
   &-h2 {
     @include font-size(32);
+
+    @include tabletDown {
+      @include font-size(25);
+    }
+
   }
 
   &-h4 {
@@ -24,6 +24,11 @@
   &-rated {
     @include font-size(42);
     font-family: $font-weight-extraBold;
+
+    @include tabletDown {
+      @include font-size(36);
+    }
+
   }
 
   // Specific targets
@@ -32,10 +37,19 @@
     font-family: $font-weight-extraBold;
     line-height: 60px;
     color: $white;
+
+    @include tabletDown {
+      @include font-size(38);
+      margin-top: 3.75rem;
+      line-height: 40px;
+      text-shadow: 1px 1px 3px $black;
+    }
+
   }
 
-  .o-product_wrapper & {
-    padding: 45px 90px 0;
+  .o-product-wrapper & {
+    position: relative;
+    padding: 2.8125rem 5.625rem 0;
     font-family: $font-weight-extraBold;
     text-align: center;
 
@@ -49,6 +63,16 @@
       background-color: #131313;
       opacity: .1;
       transform: translateX(-50%);
+
+      @include tabletDown {
+        width: 100%;
+      }
+
+    }
+
+    @include laptopDown {
+      padding-right: 0;
+      padding-left: 0;
     }
 
   }
@@ -57,6 +81,15 @@
   .o-experience & {
     display: flex;
     align-items: center;
+  }
+
+  .o-tab-content_item & {
+
+    @include mobilePlusDown {
+      flex-direction: column;
+      text-align: center;
+    }
+
   }
 
   .o-experience & {
@@ -75,7 +108,7 @@
     padding-right: 15px;
   }
 
-  .o-experience-section &-h2 {
+  .o-experience-wrapper &-h2 {
     font-family: $font-weight-extraBold;
     text-align: center;
   }

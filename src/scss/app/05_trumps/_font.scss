@@ -1,47 +1,3 @@
-/*
-  Helper classes for font styles
-*/
-
-.font-weight-thin {
-  // font-weight: $font-weight-thin;
-}
-
-.font-weight-light {
-  //font-weight: $font-weight-light;
-}
-
-.font-weight-bold {
-  //font-weight: $font-weight-bold;
-}
-
-.font-weight-regular {
-  font-weight: $font-weight-regular;
-}
-
-.font-weight-medium {
-  // font-weight: $font-weight-medium;
-}
-
-.font-weight-semibold {
-  // font-weight: $font-weight-semiBold;
-}
-
-.font-weight-heavy {
-   // font-weight: $font-weight-heavy;
-}
-
-.font-weight-black {
-   // font-weight: $font-weight-black;
-}
-
-.font-body {
-  //font-family: $font-family-base;
-}
-
-.font-heading {
-  // font-family: $font-family-heading;
-}
-
 $font-sizes-list: 16, 20, 26;
 
 @each $size in $font-sizes-list {
@@ -52,26 +8,6 @@ $font-sizes-list: 16, 20, 26;
 
 }
 
-.lh1-1rem {
-  // line-height: 1.1rem;
-}
-
-.lh1-3rem {
-  // line-height: 1.3rem;
-}
-
-.lh1-5rem {
-  // line-height: 1.5rem;
-}
-
-.lh2rem {
-  // line-height: 2rem;
-}
-
 .color-prim {
   color: $brand-primary;
-}
-
-.color-sec {
-  color: $brand-secondary;
 }

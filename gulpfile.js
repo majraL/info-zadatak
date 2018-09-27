@@ -1,4 +1,5 @@
-var gulp = require ('gulp');
+var gulp = require ('gulp'),
+  babel = require('gulp-babel'),
   browserSync = require ('browser-sync').create(),
   sass = require('gulp-sass'),
   cleanCSS = require ('gulp-clean-css'),
@@ -78,12 +79,14 @@ gulp.task('html', function () {
 //-----------------------------------------------Build javascript task--------------------------------------------------
 gulp.task('js', function () {
   return gulp.src([
-    path.npm + 'jquery/dist/jquery.js',
-    path.npm + 'smooth-scroll/dist/smooth-scroll.js',
-    path.npm + 'swiper/dist/js/swiper.js',
-    'src/scripts/**/*.js'
-  ])
+      path.npm + 'jquery/dist/jquery.js',
+      path.npm + 'smooth-scroll/dist/smooth-scroll.js',
+      path.npm + 'swiper/dist/js/swiper.js',
+      path.npm + 'smokejs/dist/js/smoke.js',
+      'src/scripts/**/*.js'
+    ])
   
+    .pipe(babel({ compact: false }))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('src/js/app/'))
 
@@ -93,7 +96,7 @@ gulp.task('js', function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest('build/js'))
-});
+  });
 //----------------------------------------------------------------------------------------------------------------------
 
 

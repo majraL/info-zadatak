@@ -9,10 +9,9 @@
 @import "01_settings/fonts";
 @import "01_settings/typography";
 @import "01_settings/breakpoints-grid";
-@import "01_settings/bootstrap-variables"; // variables
-@import "01_settings/mediaQueryMixins"; // custom media queries
+@import "01_settings/bootstrap-variables";
+@import "01_settings/mediaQueryMixins";
 @import "01_settings/base";
-@import "01_settings/preformat";
 
 
 
@@ -51,13 +50,10 @@
   03_components
 ------------------------------------------------------------------------------------*/
 @import "03_components/c-btn";
-//@import "03_components/c-customCheckbox";
 @import "03_components/c-form";
 @import "03_components/c-icon";
 @import "03_components/c-img";
 @import "03_components/c-link";
-//@import "03_components/c-modal";
-//@import "03_components/c-section";
 @import "03_components/c-title";
 
 
@@ -65,19 +61,17 @@
 /*------------------------------------------------------------------------------------
   04_objects
 ------------------------------------------------------------------------------------*/
-//@import "04_objects/o-logo";
 @import "04_objects/o-experience";
 @import "04_objects/o-form";
 @import "04_objects/o-logotypes";
 @import "04_objects/o-mainFooter";
-@import "04_objects/o-mainHeader";
 @import "04_objects/o-office";
 @import "04_objects/o-hero";
 @import "04_objects/o-product";
 @import "04_objects/o-tab";
+@import "04_objects/o-top";
 @import "04_objects/o-stats";
 @import "04_objects/o-witness";
-//@import "04_objects/o-toggle";
 
 
 
@@ -86,6 +80,3 @@
 ------------------------------------------------------------------------------------*/
 @import "05_trumps/helpers";
 @import "05_trumps/font";
-// @import "05_trumps/position";
-// @import "05_trumps/text-colors";
-// @import "05_trumps/visibility";

@@ -13,46 +13,10 @@
 
   <title>Infobip Landing</title>
   <meta name="description" content="Page description. No longer than 155 characters.">
-
-  <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Infobip Landing">
-  <meta itemprop="description" content="Page description. No longer than 155 characters.">
-  <meta itemprop="image" content="../media/brand/ogp.png">
-
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="product">
-  <meta name="twitter:site" content="@site_handle">
-  <meta name="twitter:title" content="Infobip Landing">
-  <meta name="twitter:description" content="Page description. No longer than 155 characters.">
-  <meta name="twitter:creator" content="@author_handle">
-  <meta name="twitter:image" content="../media/brand/ogp.png">
-
-  <!-- Open Graph data -->
-  <meta property="og:title" content="Infobip Landing">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="http://www.example.com/">
-  <meta property="og:image" content="../media/brand/ogp.png">
-  <meta property="og:description" content="Page description. No longer than 155 characters.">
-  <meta property="og:site_name" content="Infobip Landing Page">
-
-  <link rel="apple-touch-icon" sizes="57x57" href="../media/brand/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="../media/brand/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../media/brand/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../media/brand/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../media/brand/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../media/brand/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="../media/brand/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../media/brand/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../media/brand/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../media/brand/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../media/brand/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="../media/brand/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../media/brand/favicon-16x16.png">
-  <link rel="manifest" href="../manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="../media/brand/ms-icon-144x144.png">
   <meta name="theme-color" content="#FF5202">
 
+  <link rel="icon" type="image/x-icon" href="https://www.infobip.com/assets/img/favicon.ico">
+  
   <!-- Synchronously font loading -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>
@@ -86,15 +50,13 @@
 
 
 
-<!-- TODO: 
-    - favicon
-    - pregledat klase, nazive i konvenciju jel sve štima
--->
 
 <main>
+  <div id="top" class="hidden"></div>
+
+  <a class="o-top" href="#top" data-scroll data-fixed-el></a>
   
-  <section class="o-hero">
-    
+  <div class="o-hero">
     <div class="container">
       <div class="row">
         
@@ -115,13 +77,13 @@
         <!-- Form -->
         <div class="col-lg-4">
           <div class="o-hero_right">
-            <div class="o-form">
+            <div id="formWrapper" class="o-form">
               <div class="o-form_header">
                 <strong class="mess">READY TO GET STARTED?</strong>
               </div>
               <hr>
               <div class="o-form_body">
-                <form action="nono">
+                <form id="form">
                   <!-- First name -->
                   
 
@@ -177,6 +139,7 @@
                   <div class="form-group">
   <label for="country" class="form-label">Country:</label>
   <select id="country" class="form-control" name="country" required>
+    <option value=""></option>
     <option value="AF">Afghanistan</option>
     <option value="AX">Åland Islands</option>
     <option value="AL">Albania</option>
@@ -464,12 +427,14 @@
 
 </div>
         
-                  <button class="c-btn c-btn-primary">Submit</button>
+                  <button id="btn-submit" class="c-btn c-btn-primary" type="submit">Submit</button>
 
                 </form>
               </div>
               <div class="o-form_footer">
-                <span>Already have an infobip account? - <a class="c-link" href="#login">login</a></span>
+                <span>Already have an infobip account? - <a class="c-link" 
+                    href="https://portal.infobip.com/login/?callback=https%3A%2F%2Fportal.infobip.com%2Fsettings%2Froundabout%3F" 
+                    target="_blank">login</a></span>
               </div>
             </div>
           </div>
@@ -477,11 +442,9 @@
 
       </div>
     </div>
+  </div>
 
-  </section>
-  
-
-  <section class="o-product_wrapper">
+  <div class="o-product-wrapper">
     <div class="container">
       <div class="row">
 
@@ -489,39 +452,42 @@
           <div class="swiper-container" data-swiper-container>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="o-witness">
+                
+<div class="o-witness">
   <div class="o-witness_logo">
-    <img src="media/app/uber-logo.svg" alt="Uber">
+    <img src="media/app/uber-logo.svg" alt="uber">
   </div>
-  <i class="o-witness_mess">
-      The visual and immediate impact that RCS messaging provides, with for example video driver confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of taking the mobile experience for all Uber users around the world to a higher level.
-  </i>
+  <i class="o-witness_mess">The visual and immediate impact that RCS messaging provides, with for example video driver 
+                      confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of 
+                      taking the mobile experience for all Uber users around the world to a higher level.</i>
   <div class="o-witness_person">
     <strong><span class="color-prim">Rahul Vijay,</span> Global Strategic Sourcing, Uber</strong>
   </div>
 </div>
               </div>
               <div class="swiper-slide">
-                <div class="o-witness">
+                
+<div class="o-witness">
   <div class="o-witness_logo">
-    <img src="media/app/uber-logo.svg" alt="Uber">
+    <img src="media/app/strava-logo.svg" alt="strava">
   </div>
-  <i class="o-witness_mess">
-      The visual and immediate impact that RCS messaging provides, with for example video driver confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of taking the mobile experience for all Uber users around the world to a higher level.
-  </i>
+  <i class="o-witness_mess">The visual and immediate impact that RCS messaging provides, with for example video driver 
+                      confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of 
+                      taking the mobile experience for all Uber users around the world to a higher level.</i>
   <div class="o-witness_person">
     <strong><span class="color-prim">Rahul Vijay,</span> Global Strategic Sourcing, Uber</strong>
   </div>
 </div>
               </div>
               <div class="swiper-slide">
-                <div class="o-witness">
+                
+<div class="o-witness">
   <div class="o-witness_logo">
-    <img src="media/app/uber-logo.svg" alt="Uber">
+    <img src="media/app/uber-logo.svg" alt="uber">
   </div>
-  <i class="o-witness_mess">
-      The visual and immediate impact that RCS messaging provides, with for example video driver confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of taking the mobile experience for all Uber users around the world to a higher level.
-  </i>
+  <i class="o-witness_mess">The visual and immediate impact that RCS messaging provides, with for example video driver 
+                      confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of 
+                      taking the mobile experience for all Uber users around the world to a higher level.</i>
   <div class="o-witness_person">
     <strong><span class="color-prim">Rahul Vijay,</span> Global Strategic Sourcing, Uber</strong>
   </div>
@@ -530,50 +496,64 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
-        </div>
-
-        <div class="col-12">
+        
           <h2 class="c-ttl c-ttl-h2">Infobip helps you to better engage and meet your <br class="br"/> customers where 
               they are across a variety of messaging channels.</h2>
-          <div class="o-product">
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img sms"></div>SMS
-              </div>
-            </a>
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img voice"></div>VOICE
-              </div>
-            </a>
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img push"></div>PUSH
-              </div>
-            </a>
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img email"></div>EMAIL
-              </div>
-            </a>
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img chat"></div>CHAT APPS
-              </div>
-            </a>
-            <a class="c-link" href="#">
-              <div class="o-product_item">
-                <div class="o-product_img rcs"></div>RCS
-              </div>
-            </a>
-          </div>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/sms" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img sms"></div>SMS
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/voice" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img voice"></div>VOICE
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/push" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img push"></div>PUSH
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/email" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img email"></div>EMAIL
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/chat-apps" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img chat"></div>CHAT APPS
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-mdp-4 col-lg-2 col-xl-2">
+          <a class="c-link" href="https://www.infobip.com/en/platform/messaging/rich-communication-services" target="_blank">
+            <div class="o-product_item">
+              <div class="o-product_img rcs"></div>RCS
+            </div>
+          </a>
         </div>
 
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="o-tab-wrapper global-bg">
+  <div class="o-tab-wrapper">
     <div class="container">
       <div class="o-tab">
         
@@ -581,21 +561,26 @@
 
           <div class="col-lg-4">
             <div class="o-tab-triggers" data-tab-togglers="#tab-content">
-              <div class="o-tab-triggers_item active" data-toggle-tab="omni">OMNI Messaging</div>
-              <div class="o-tab-triggers_item" data-toggle-tab="performance">Channel Performance</div>
-              <div class="o-tab-triggers_item" data-toggle-tab="emerge">Emerging Channels</div>
-              <div class="o-tab-triggers_item" data-toggle-tab="flows">Build Flows</div>
-              <div class="o-tab-triggers_item" data-toggle-tab="pre-build">Connect with pre-build integrations</div>
+              <div class="o-tab-triggers_item active" data-toggle-tab="omni">
+                  OMNI Messaging<i class="c-icon"></i></div>
+              <div class="o-tab-triggers_item" data-toggle-tab="performance">
+                  Channel Performance<i class="c-icon"></i></div>
+              <div class="o-tab-triggers_item" data-toggle-tab="emerge">
+                  Emerging Channels<i class="c-icon"></i></div>
+              <div class="o-tab-triggers_item" data-toggle-tab="flows">
+                  Build Flows<i class="c-icon"></i></div>
+              <div class="o-tab-triggers_item" data-toggle-tab="pre-build">
+                  Connect with pre-build integrations<i class="c-icon"></i></div>
             </div>
           </div>
 
-          <div class="col-lg-8">
+          <div class="col-lg-8 pt-5 pt-lg-0">
             <div id="tab-content" class="o-tab-content">
               
 
 <div class="o-tab-content_item omni active" data-tab="omni">
 
-  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> OMNI Messaging</h2>
+  <h3 class="c-ttl c-ttl-h2"><i class="c-icon"></i> OMNI Messaging</h3>
   <p class="o-tab-content_about">
     Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
                     Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
@@ -607,11 +592,11 @@
 
 <div class="o-tab-content_item performance" data-tab="performance">
 
-  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Channel Performance</h2>
+  <h3 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Channel Performance</h3>
   <p class="o-tab-content_about">
-    Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
-                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
-                    at the right time.
+    Dolcelatte swiss fromage. Croque monsieur mozzarella halloumi cauliflower cheese edam 
+                    roquefort cheesy feet monterey jack. Feta babybel airedale cow when the cheese comes out 
+                    everybody&#39;s happy queso melted cheese paneer. Pepper jack.
   </p>
 </div>
 
@@ -619,11 +604,11 @@
 
 <div class="o-tab-content_item emerge" data-tab="emerge">
 
-  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Emerging Channels</h2>
+  <h3 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Emerging Channels</h3>
   <p class="o-tab-content_about">
-    Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
-                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
-                    at the right time.
+    Pecorino cheese slices ricotta. Taleggio bocconcini cauliflower cheese bocconcini manchego 
+                    cottage cheese pepper jack everyone loves. Caerphilly chalk and cheese everyone loves mozzarella 
+                    halloumi cheese on toast jarlsberg melted cheese.
   </p>
 </div>
 
@@ -631,11 +616,11 @@
 
 <div class="o-tab-content_item flows" data-tab="flows">
 
-  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Build Flows</h2>
+  <h3 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Build Flows</h3>
   <p class="o-tab-content_about">
-    Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
-                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
-                    at the right time.
+    Bavarian bergkase croque monsieur babybel. Jarlsberg cheese strings halloumi ricotta queso 
+                    mozzarella caerphilly airedale. Hard cheese cottage cheese rubber cheese camembert de normandie 
+                    edam squirty cheese cottage cheese melted cheese.
   </p>
 </div>
 
@@ -643,11 +628,10 @@
 
 <div class="o-tab-content_item pre-build" data-tab="pre-build">
 
-  <h2 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Connect with pre-build integrations</h2>
+  <h3 class="c-ttl c-ttl-h2"><i class="c-icon"></i> Connect with pre-build integrations</h3>
   <p class="o-tab-content_about">
-    Integrate multiple messaging channels using one API - SMS, Email, Voice, Push, Facebook 
-                    Messenger, LINE, Telegram, Viber to communicate with customers over their preferred channels 
-                    at the right time.
+    Swiss when the cheese comes out everybody&#39;s happy cheese triangles. Bavarian bergkase paneer 
+                    say cheese emmental macaroni cheese bavarian bergkase danish fontina goat.
   </p>
 </div>
             </div>
@@ -657,15 +641,15 @@
 
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="o-experience-section">
+  <div class="o-experience-wrapper">
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center justify-content-lg-start">
 
         <div class="col-12">
           <h2 class="c-ttl c-ttl-h2">Infobip knows customer experience</h2>
-          <p class="o-experience-section_about">
+          <p class="o-experience-wrapper_about">
             It's what's inside that counts, that's why we've built the wolrd's most robust omni-channel customer 
             communications platform from the ground up.</p>
         </div>
@@ -697,10 +681,10 @@
 
       </div>
     </div>
-  </section>
+  </div>
 
-  <div class="container">
-    <section class="o-stats-wrapper">
+  <div class="o-stats-wrapper">
+    <div class="container">
       <div class="row">
 
         <div class="col-12">
@@ -742,31 +726,44 @@
         </div>
 
         <div class="col-12">
-          <button class="c-btn c-btn-primary">Contact sales</button>
+          <a class="c-btn c-btn-primary" href="#formWrapper" data-scroll>Contact sales</a>
         </div>
 
-      </div>
-    </section>
-  </div>
-
-  <section class="o-logotypes-wrapper global-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-
-          <ul class="o-logotypes">
-            <li class="o-logotypes_item sms"></li>
-            <li class="o-logotypes_item mef"></li>
-            <li class="o-logotypes_item ctia"></li>
-            <li class="o-logotypes_item mma"></li>
-            <li class="o-logotypes_item pci"></li>
-            <li class="o-logotypes_item bureau"></li>
-          </ul>
-
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <div class="o-logotypes">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item sms"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item mef"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item ctia"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item mma"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item pci"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <div class="o-logotypes_item bureau"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </main>
 
@@ -774,7 +771,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-mdp-3">
+      <div class="col-md-6 col-mdp-4 col-lg-3">
         <div class="o-office">
           <strong class="d-block">SAN FRANCISCO</strong>
           <div class="o-office_street">
@@ -787,7 +784,7 @@
         </div>
       </div>
 
-      <div class="col-mdp-3">
+      <div class="col-md-6 col-mdp-4 col-lg-3">
         <div class="o-office">
           <strong class="d-block">NEW YORK</strong>
           <div class="o-office_street">
@@ -800,7 +797,7 @@
         </div>
       </div>
 
-      <div class="col-mdp-3">
+      <div class="col-md-6 col-mdp-4 col-lg-3">
         <div class="o-office">
           <strong class="d-block">VANCOUVER</strong>
           <div class="o-office_street">
@@ -814,13 +811,27 @@
 
       <div class="col-12">
         <hr>
-        <div class="o-mainFooter_terms">
-          <div>Copyright &copy; 2006.-2018. Infobip ltd.</div>
-          <div class="o-mainFooter_nav">
-            <a class="c-link" href="https://www.infobip.com/en/policies/terms" target="_blank">Terms and conditions</a>
-            <a class="c-link" href="https://www.infobip.com/en/policies/privacy" target="_blank">Privacy Policy</a>
-            <a class="c-link" href="https://www.infobip.com/en/policies/terms/short-code" target="_blank">Shortcode Terms</a>
-            <a class="c-link" href="https://www.infobip.com/en/terms-of-use" target="_blank">Terms of Use</a>
+        <div class="row o-mainFooter_terms">
+          <div class="col-lg-4">Copyright &copy; 2006.-2018. Infobip ltd.</div>
+          <div class="col-lg-8">
+            <ul class="o-mainFooter-nav">
+              <li class="o-mainFooter-nav_item">
+                <a class="c-link" href="https://www.infobip.com/en/policies/terms" target="_blank">
+                  Terms and conditions</a>
+              </li>
+              <li class="o-mainFooter-nav_item">
+                <a class="c-link" href="https://www.infobip.com/en/policies/privacy" target="_blank">
+                  Privacy Policy</a>
+              </li>
+              <li class="o-mainFooter-nav_item">
+                <a class="c-link" href="https://www.infobip.com/en/policies/terms/short-code" target="_blank">
+                  Shortcode Terms</a>
+              </li>
+              <li class="o-mainFooter-nav_item">
+                <a class="c-link" href="https://www.infobip.com/en/terms-of-use" target="_blank">
+                  Terms of Use</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

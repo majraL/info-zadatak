@@ -1,11 +1,10 @@
+{% macro witnessFunction(client, mess) %}
 <div class="o-witness">
   <div class="o-witness_logo">
-    <img src="media/app/uber-logo.svg" alt="Uber">
+    <img src="media/app/{{ client }}-logo.svg" alt="{{ client }}">
   </div>
-  <i class="o-witness_mess">
-      The visual and immediate impact that RCS messaging provides, with for example video driver confirmations and appealing lunch menu image delivery, allow Uber to explore the possibilities of taking the mobile experience for all Uber users around the world to a higher level.
-  </i>
+  <i class="o-witness_mess">{{ mess }}</i>
   <div class="o-witness_person">
     <strong><span class="color-prim">Rahul Vijay,</span> Global Strategic Sourcing, Uber</strong>
   </div>
-</div>
+</div>{% endmacro %}

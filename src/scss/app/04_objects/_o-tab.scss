@@ -5,7 +5,7 @@
     @extend %no-repeat;
     @extend %bg-cover;
     @extend %bg-center;
-    padding: 80px 0 45px;
+    padding: 5rem 0 2.8125rem;
     background-color: #F3F3F3;
     background-image: url('../media/app/globe-bg.png');
     overflow-x: hidden;
@@ -17,7 +17,7 @@
 
     &_item {
       @include font-size(18);
-      padding: 15px 20px;
+      padding: .9375rem 1.25rem;
       font-family: $font-weight-bold;
       opacity: .8;
 
@@ -32,7 +32,7 @@
 
       svg {
         transform: translateX(0);
-        transition: transform 175ms
+        transition: transform 175ms;
       }
 
       &.active {
@@ -57,13 +57,14 @@
   &-content_item {
     position: absolute;
     width: 100%;
-    padding: 40px 20px 40px 50px;
+    padding: 2.5rem 1.25rem 2.5rem 3.125rem;
     border-top: 6px solid $brand-primary;
     background-color: $white;
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
     box-shadow: 0 6px 12px 2px rgba(205,205,205, .50);
+    transition: transform 450ms, opacity 400ms;
 
     &.active {
       opacity: 1;
@@ -77,6 +78,50 @@
     @include font-size(24);
     opacity: .8;
     line-height: 36px;
+  }
+
+  @include laptopDown {
+
+    &-wrapper {
+      padding-bottom: 21.25rem;
+    }
+
+  }
+
+  @include tabletDown {
+
+    &-wrapper {
+      padding-bottom: 25rem;
+    }
+
+    &-content_item {
+      padding: 1.25rem .9375rem;
+      width: auto;
+      right: -15px;
+      left: -15px;
+    }
+
+    &-content_about {
+      @include font-size(20);
+    }
+
+  }
+  
+  @include mobilePlusDown {
+
+    &-wrapper {
+      padding-bottom: 31.25rem;
+    }
+
+  }
+
+  @include laptop {
+    overflow: hidden;
+
+    &-triggers_item{
+      position: relative;
+    }
+
   }
   
 }

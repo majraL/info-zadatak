@@ -37,18 +37,15 @@ $color-error: #D0021B;
 .form {
 
   &-group {
+    position: relative;
+    margin-bottom: $input-group-margin-bottom;
 
-    @if $input-group-margin-bottom != 0 {
-      margin-bottom: $input-group-margin-bottom;
-
-      .form-group-clean > & {
-        margin-bottom: 0;
-      }
-
-    }
-
-    .o-contact_form & {
-      margin-bottom: 1.1rem;
+    .smk-error-msg {
+      @include font-size(15);
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $color-error;
     }
 
   }
@@ -78,8 +75,8 @@ $color-error: #D0021B;
       cursor: not-allowed;
     }
 
-    .error.has-error & {
-      border-color: $red;
+    .has-feedback.has-error & {
+      border-color: $color-error;
     }
 
   }
@@ -90,16 +87,6 @@ $color-error: #D0021B;
     color: $input-label-color;
     font-size: $input-label-font-size;
     font-family: $input-label-font-weight;
-  }
-
-}
-
-.form-error {
-
-  &-wrapper {}
-
-  &-message {
-    color: $red;
   }
 
 }

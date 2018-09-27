@@ -1,24 +1,55 @@
 // Main footer
 .o-mainFooter {
-  @extend %no-repeat;
-  position: fixed;
-  z-index: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 81px 0;
+  padding: 5.0625rem 0 1.875rem;
   background-color: #2D2D2D;
-  background-image: url('../media/app/map_NA.svg');
-  background-position: 59% 34%;
-  background-size: 35%;
   color: $white;
 
   &_terms {
     @include font-size(14);
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 1.875rem;
     color: #636363;
+  }
+
+  &-nav_item {
+
+    @include laptopDown {
+      display: block;
+      margin-top: 1.25rem;
+
+      &:first-child {
+        margin-top: 3.125rem;
+      }
+
+    }
+
+    @include laptop {
+      
+      &:not(:last-child) {
+        margin-right: 1.875rem;
+      }
+
+    }
+
+  }
+
+  @include laptop {
+    position: fixed;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../media/app/map_NA.svg');
+    background-position: 59% 34%;
+    background-repeat: no-repeat;
+    background-size: 35%;
+
+    &-nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
   }
 
 }

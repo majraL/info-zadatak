@@ -1,5 +1,5 @@
 .o-experience {
-  padding: 28px 30px;
+  padding: 1.75rem 1.875rem;
   border-radius: 3px;
   background-color: $brand-primary;
 
@@ -7,20 +7,44 @@
     line-height: 28px;
   }
 
-  &-section {
+  &-wrapper {
     @extend %no-repeat;
     @extend %bg-cover;
     @extend %bg-center;
-    padding: 81px 0;
+    padding: 5.0625rem 0;
     background-image: url('../media/app/customer-experience-bg.jpg');
     color: $white;
 
     &_about {
       @include font-size(24);
-      padding: 0 180px;
-      margin: 20px 0 60px;
+      padding: 0 11.25rem;
+      margin: 1.25rem 0 3.75rem;
       text-align: center;
       line-height: 34px;
+    }
+
+  }
+
+  @include laptopDown {
+    margin-bottom: 1.875rem;
+
+    &-wrapper {
+      padding-bottom: 0;
+    }
+
+    &-wrapper_about {
+      padding: 0;
+    }
+
+  }
+
+  @include tabletDown {
+    margin-right: -15px;
+    margin-left: -15px;
+
+    &-wrapper_about {
+      @include font-size(20);
+      line-height: 30px;
     }
 
   }

@@ -1,18 +1,14 @@
 .o-logotypes {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &-wrapper {
-    @extend %no-repeat;
-    @extend %bg-cover;
-    @extend %bg-center;
-    padding: 51px 0;
-    background-color: #F3F3F3;
-    background-image: url('../media/app/globe-bg.png');
-  }
+  @extend %no-repeat;
+  @extend %bg-cover;
+  @extend %bg-center;
+  padding: 3.1875rem 0;
+  background-color: #F3F3F3;
+  background-image: url('../media/app/globe-bg.png');
 
   &_item {
+    margin-right: auto;
+    margin-left: auto;
 
     &.sms {
       @extend .svg-award-best-sms;
@@ -44,6 +40,14 @@
       @extend .svg-iso-logo-dims;
     }
     
+  }
+
+  @include laptopDown {
+
+    &_item {
+      margin-bottom: 1.875rem;
+    }
+
   }
 
 }

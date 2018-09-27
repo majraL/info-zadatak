@@ -2,32 +2,8 @@
 $white: #ffffff;
 $black: #000000;
 
-$yellow: #F6A600;
-
 // Brand Primary
 $brand-primary: #FF5202;
-
-$brand-primary-dark: scale-color(adjust-hue($brand-primary, -5), $saturation:2%, $lightness:-25%);
-$brand-primary-darken: scale-color(adjust-hue($brand-primary, -10), $saturation:6%, $lightness:-55%);
-$brand-primary-darkest: scale-color(adjust-hue($brand-primary, -10), $saturation:10%, $lightness:-82%);
-
-$brand-primary-light: scale-color(adjust-hue($brand-primary, 5), $saturation: 6%, $lightness: 32%);
-$brand-primary-lighten: scale-color(adjust-hue($brand-primary, 6), $saturation: 5%, $lightness: 52%);
-$brand-primary-lightest: scale-color(adjust-hue($brand-primary, 7), $saturation: 5%, $lightness: 82%);
-$brand-primary-mostLightest: scale-color(adjust-hue($brand-primary, 8), $saturation: 5%, $lightness: 92%);
-
-// Brand Secondary
-$brand-secondary: #2B8FB0;
-
-$brand-secondary-dark: scale-color(adjust-hue($brand-secondary, -5), $saturation:2%, $lightness:-25%);
-$brand-secondary-darken: scale-color(adjust-hue($brand-secondary, -10), $saturation:6%, $lightness:-55%);
-$brand-secondary-darkest: scale-color(adjust-hue($brand-secondary, -10), $saturation:10%, $lightness:-82%);
-
-$brand-secondary-light: scale-color(adjust-hue($brand-secondary, 5), $saturation: 6%, $lightness: 32%);
-$brand-secondary-lighten: scale-color(adjust-hue($brand-secondary, 6), $saturation: 5%, $lightness: 52%);
-$brand-secondary-lightest: scale-color(adjust-hue($brand-secondary, 7), $saturation: 5%, $lightness: 82%);
-$brand-secondary-mostLightest: scale-color(adjust-hue($brand-secondary, 8), $saturation: 5%, $lightness: 92%);
-
 
 // Brand States
 $brand-active: $brand-primary;
@@ -42,15 +18,6 @@ $brand-danger: #C12D3F;
 $color-text-neutral: #1C1C1C;
 $color-text-neutral-light: #2D2D2D;
 $color-headings-neutral: darken($color-text-neutral, 16.86%);
-
-
-// UI colors
-$color-ui-transparent: transparent;
-$color-ui-light: #ffffff;
-$color-ui-tint: #EBEBEB;
-$color-ui-shade: #CCCCCC;
-$color-ui-dark: #3C3C3C;
-$color-ui-link: $brand-accented;
 
 // Assets
 $asset-separator-light: #E6E6E6;

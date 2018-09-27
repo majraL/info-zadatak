@@ -4,9 +4,19 @@
   &_mess {
     @include font-size(22);
     display: block;
-    padding: 25px 90px;
+    padding: 1.5625rem 5.625rem;
     opacity: .85;
     line-height: 34px;
+  }
+
+  @include desktopDown {
+
+    &_mess {
+      @include font-size(19);
+      padding-right: 0;
+      padding-left: 0;
+    }
+
   }
 
 }

@@ -21,21 +21,6 @@ $btn-primary-border-style-hover: $btn-primary-border-style;
 $btn-primary-border-color: $white;
 $btn-primary-border-color-hover: darken($btn-primary-border-color, 10%);
 
-
-// Secondary button settings
-$btn-secondary-bg: $brand-secondary;
-$btn-secondary-bg-hover: darken($btn-secondary-bg, 10%);
-
-$btn-secondary-color: $white;
-$btn-secondary-color-hover: $btn-secondary-color;
-
-$btn-secondary-border-width: 0;
-$btn-secondary-border-width-hover: $btn-secondary-border-width;
-$btn-secondary-border-style: solid;
-$btn-secondary-border-style-hover: $btn-secondary-border-style;
-$btn-secondary-border-color: $white;
-$btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
-
 .c-btn {
   @include transition($time: 175ms);
   display: inline-flex;
@@ -78,21 +63,6 @@ $btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
 
   }
 
-  &-secondary {
-    background-color: $btn-secondary-bg;
-    color: $btn-secondary-color;
-    border-width: $btn-secondary-border-width;
-    border-style: $btn-secondary-border-style;
-    border-color: $btn-secondary-border-color;
-
-    &:hover {
-      background-color: $btn-secondary-bg-hover;
-      color: $btn-secondary-color-hover;
-      border-color: $btn-secondary-border-color-hover;
-    }
-
-  }
-
   .o-form_body & {
     width: 100%;
   }
@@ -101,7 +71,7 @@ $btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
     min-width: 270px;
     padding: 1.25rem 1rem;
     margin-top: 4.75rem;
-    box-shadow: 0 6px 12px 2px rgba(205,205,205, .50);
+    box-shadow: 0 6px 12px 2px rgba(205,205,205, .5);
   }
 
 

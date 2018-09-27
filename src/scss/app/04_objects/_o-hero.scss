@@ -2,15 +2,15 @@
   @extend %no-repeat;
   @extend %bg-cover;
   @extend %bg-center;
-  padding: 81px 0;
+  padding: 5.0625rem 0;
   background-image: url('../media/app/marquee-background.jpg');
 
   &_left {
-    padding-right: 40px;
+    padding-right: 2.5rem;
   }
 
   &_brands {
-    margin-top: 60px;
+    margin-top: 3.75rem;
     color: $brand-primary;
 
     &-bg {
@@ -24,10 +24,40 @@
     .mess {
       @include font-size(20);
       display: block;
-      margin-bottom: 25px;
+      margin-bottom: 1.5625rem;
       font-family: $font-weight-semiBold;
     }
 
   }
+
+  @include desktop {
+    background-position: center 0;
+  }
+
+  @include laptopDown {
+    padding-bottom: 0;
+    
+    &_left {
+      padding-right: 0;
+    }
+
+    &_brands {
+      margin-bottom: 40px;
+    }
+    
+  }
+  
+  @include tabletPlusDown {
+    background-position: 40% 0;
+  }
+
+  @include tabletDown {
+
+    &_brands-bg {
+      background-size: 100%;
+    }
+
+  }
+
 
 }

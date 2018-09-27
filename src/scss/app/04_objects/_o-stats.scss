@@ -5,7 +5,7 @@
   padding: 1.25rem 1.5625rem .9375rem;
   border-radius: 4px;
   background-color: #F3F3F3;
-  box-shadow: 0 6px 12px 2px rgba(205,205,205, .50);
+  box-shadow: 0 6px 12px 2px rgba(205,205,205, .5);
 
   &-wrapper {
     padding: 5.0625rem 0;
@@ -14,7 +14,7 @@
 
   &-wrapper_about {
     @include font-size(24);
-    margin: 10px 0 4rem;
+    margin: .625rem 0 4rem;
     opacity: .8;
     line-height: 36px;
   }
@@ -26,6 +26,19 @@
 
   &_about {
     @include font-size(18);
+  }
+
+  @include laptopDown {
+    margin-bottom: 1.875rem;
+  }
+
+  @include tabletDown {
+
+    &-wrapper_about {
+      @include font-size(20);
+      line-height: 30px;
+    }
+
   }
 
 }

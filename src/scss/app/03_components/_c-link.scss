@@ -21,25 +21,27 @@
     color: $brand-primary;
   }
 
-  .o-product &:hover {
-    @extend %decoration-none;
+  .o-product-wrapper & {
+    display: block;
+    margin-top: 1.875rem;
+    
+    &:hover {
+      @extend %decoration-none;
+    }
+
   }
 
   .o-office & {
     @extend %decoration-underline;
   }
 
-  .o-mainFooter_nav & {
+  .o-mainFooter-nav_item & {
     color: #636363;
     transition: color 125ms;
 
     &:hover {
       @extend %decoration-none;
       color: $white;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
     }
 
   }

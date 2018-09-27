@@ -20,11 +20,11 @@ html, body {
 }
 
 body.p-homepage {
-  margin-bottom: 442px;
-}
 
-h1, h2, h3, h4, h5, h6 {
-  // font-family: $font-family-heading;
+  @include laptop {
+    margin-bottom: 25.875rem;
+  }
+  
 }
 
 ul {
@@ -54,17 +54,21 @@ hr {
 
   .o-stats & {
     border-color: rgba($color-text-neutral, .25);
-    margin: 17px 0 15px;
+    margin: 1.0625rem 0 .9375rem;
   }
 
 }
 
 main {
 
-  .p-homepage & {
-    position: relative;
-    z-index: 1;
-    background-color: $white;
+  @include laptop {
+    
+    .p-homepage & {
+      position: relative;
+      z-index: 1;
+      background-color: $white;
+    }
+
   }
 
 }
@@ -73,7 +77,7 @@ br.br {
 
   @include laptopDown {
     
-    .o-product_wrapper .c-ttl-h2 & {
+    .o-product-wrapper .c-ttl-h2 & {
       display: none;
     }
 
